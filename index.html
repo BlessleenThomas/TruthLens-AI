@@ -1,0 +1,713 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Makes the website responsive on mobile/tablet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Browser tab title -->
+    <title>TruthLens AI | News Intelligence</title>
+
+    <!-- Our custom stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =====================================================
+         BACKGROUND DECORATION
+         These elements are styled with CSS to create
+         the futuristic AI/newsroom appearance.
+    ====================================================== -->
+
+    <div class="background-grid"></div>
+
+    <div class="glow glow-one"></div>
+    <div class="glow glow-two"></div>
+
+
+    <!-- =====================================================
+         NAVIGATION BAR
+    ====================================================== -->
+
+    <header class="navbar">
+
+        <!-- Brand -->
+        <div class="brand">
+
+            <div class="brand-mark">
+                TL
+            </div>
+
+            <div class="brand-text">
+                <h2>TruthLens</h2>
+                <span>AI NEWS INTELLIGENCE</span>
+            </div>
+
+        </div>
+
+
+        <!-- Status indicator -->
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            <span>AI SYSTEM ONLINE</span>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         MAIN APPLICATION
+    ====================================================== -->
+
+    <main class="main-container">
+
+
+        <!-- =================================================
+             HERO SECTION
+        ================================================== -->
+
+        <section class="hero-section">
+
+            <div class="eyebrow">
+
+                <span class="eyebrow-line"></span>
+
+                INTELLIGENT NEWS ANALYSIS
+
+                <span class="eyebrow-line"></span>
+
+            </div>
+
+
+            <h1>
+
+                Don't just read the news.
+
+                <span class="gradient-text">
+                    Analyze it.
+                </span>
+
+            </h1>
+
+
+            <p class="hero-description">
+
+                TruthLens AI examines linguistic patterns in news
+                content and provides an explainable assessment of
+                whether the text may contain signals associated with
+                misleading information.
+
+            </p>
+
+
+            <!-- Small feature indicators -->
+
+            <div class="hero-features">
+
+                <span>
+                    <b>01</b> NLP Analysis
+                </span>
+
+                <span>
+                    <b>02</b> ML Prediction
+                </span>
+
+                <span>
+                    <b>03</b> Explainable Results
+                </span>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ANALYSIS WORKSPACE
+        ================================================== -->
+
+        <section class="workspace">
+
+
+            <!-- LEFT SIDE: INPUT -->
+
+            <div class="input-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span class="panel-number">
+                            01
+                        </span>
+
+                        <h2>
+                            Submit Content
+                        </h2>
+
+                    </div>
+
+
+                    <span class="panel-tag">
+                        INPUT
+                    </span>
+
+                </div>
+
+
+                <p class="panel-description">
+
+                    Paste a headline, claim, or complete news article
+                    for AI-assisted analysis.
+
+                </p>
+
+
+                <!-- Text input -->
+
+                <div class="textarea-container">
+
+                    <textarea
+                        id="articleInput"
+                        maxlength="10000"
+                        placeholder="Paste your news article or headline here...
+
+Example:
+Scientists announce a revolutionary discovery that will completely change the world..."
+                    ></textarea>
+
+
+                    <!-- Character counter -->
+
+                    <div class="textarea-footer">
+
+                        <span id="inputStatus">
+                            Ready for analysis
+                        </span>
+
+                        <span>
+                            <strong id="charCount">0</strong>
+                            / 10,000
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Action buttons -->
+
+                <div class="action-area">
+
+                    <button
+                        id="analyzeBtn"
+                        class="primary-button"
+                        onclick="analyzeArticle()"
+                    >
+
+                        <span class="button-icon">
+                            ◈
+                        </span>
+
+                        ANALYZE CONTENT
+
+                        <span class="button-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="secondary-button"
+                        onclick="clearArticle()"
+                    >
+                        CLEAR
+                    </button>
+
+                </div>
+
+
+                <!-- Privacy note -->
+
+                <div class="privacy-note">
+
+                    <span>●</span>
+
+                    <p>
+                        Analysis is performed on the submitted text.
+                        Avoid entering private or sensitive information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- RIGHT SIDE: LIVE SYSTEM PANEL -->
+
+            <div class="system-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+
+                        <span class="panel-number">
+                            02
+                        </span>
+
+                        <h2>
+                            Analysis Engine
+                        </h2>
+
+                    </div>
+
+                    <span class="engine-icon">
+                        ◉
+                    </span>
+
+                </div>
+
+
+                <!-- Engine visualization -->
+
+                <div class="engine-visual">
+
+                    <div class="scan-ring ring-one"></div>
+                    <div class="scan-ring ring-two"></div>
+                    <div class="scan-ring ring-three"></div>
+
+
+                    <div class="engine-core">
+
+                        <span>
+                            AI
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="engine-status">
+
+                    <div>
+
+                        <span class="mini-dot"></span>
+
+                        NLP ENGINE
+
+                    </div>
+
+                    <strong>
+                        STANDBY
+                    </strong>
+
+                </div>
+
+
+                <div class="engine-status">
+
+                    <div>
+
+                        <span class="mini-dot"></span>
+
+                        CLASSIFIER
+
+                    </div>
+
+                    <strong>
+                        READY
+                    </strong>
+
+                </div>
+
+
+                <div class="engine-status">
+
+                    <div>
+
+                        <span class="mini-dot"></span>
+
+                        EXPLAINABILITY
+
+                    </div>
+
+                    <strong>
+                        READY
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LOADING SCREEN
+        ================================================== -->
+
+        <section
+            id="loadingSection"
+            class="loading-section hidden"
+        >
+
+            <div class="loading-orbit">
+
+                <div></div>
+
+            </div>
+
+
+            <span class="loading-label">
+                ANALYZING CONTENT
+            </span>
+
+
+            <p>
+                Processing linguistic patterns and generating
+                an explainable prediction...
+            </p>
+
+
+            <div class="loading-progress">
+
+                <div id="loadingBar"></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESULT SECTION
+        ================================================== -->
+
+        <section
+            id="resultSection"
+            class="result-section hidden"
+        >
+
+            <!-- Result header -->
+
+            <div class="result-top">
+
+                <div>
+
+                    <span class="result-label">
+                        ANALYSIS COMPLETE
+                    </span>
+
+                    <h2 id="prediction">
+                        Potentially Misleading
+                    </h2>
+
+                    <p id="resultSummary">
+                        The model identified textual patterns
+                        associated with potentially misleading content.
+                    </p>
+
+                </div>
+
+
+                <!-- Circular confidence -->
+
+                <div class="confidence-circle">
+
+                    <div>
+
+                        <strong id="confidenceValue">
+                            87%
+                        </strong>
+
+                        <span>
+                            CONFIDENCE
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RESULT GRID
+            ================================================== -->
+
+            <div class="result-grid">
+
+
+                <!-- Confidence -->
+
+                <div class="result-card">
+
+                    <div class="result-card-header">
+
+                        <span>
+                            MODEL ASSESSMENT
+                        </span>
+
+                        <span>
+                            01
+                        </span>
+
+                    </div>
+
+
+                    <div class="confidence-bar-container">
+
+                        <div
+                            id="confidenceFill"
+                            class="confidence-fill"
+                            style="width: 87%"
+                        ></div>
+
+                    </div>
+
+
+                    <div class="confidence-scale">
+
+                        <span>
+                            LOW
+                        </span>
+
+                        <span>
+                            HIGH
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- Indicators -->
+
+                <div class="result-card indicators-card">
+
+                    <div class="result-card-header">
+
+                        <span>
+                            KEY INDICATORS
+                        </span>
+
+                        <span>
+                            02
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        id="indicatorsList"
+                        class="indicators-list"
+                    >
+
+                        <!-- JavaScript will populate this -->
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- =================================================
+                 RESPONSIBLE AI NOTICE
+            ================================================== -->
+
+            <div class="responsible-ai">
+
+                <div class="responsible-icon">
+                    !
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Responsible AI Notice
+                    </strong>
+
+                    <p>
+                        This system provides an AI-assisted assessment
+                        based on learned textual patterns. A confidence
+                        score does not represent proof that a claim is
+                        true or false. Important claims should be
+                        independently verified.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Analyze another article -->
+
+            <button
+                class="new-analysis-button"
+                onclick="analyzeAnother()"
+            >
+
+                ← ANALYZE ANOTHER ARTICLE
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HOW IT WORKS
+        ================================================== -->
+
+        <section class="how-section">
+
+            <div class="section-heading">
+
+                <span>
+                    HOW IT WORKS
+                </span>
+
+                <h2>
+                    From text to insight.
+                </h2>
+
+            </div>
+
+
+            <div class="steps">
+
+
+                <!-- Step 1 -->
+
+                <div class="step">
+
+                    <div class="step-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Preprocess
+                    </h3>
+
+                    <p>
+                        The article is cleaned and transformed
+                        into machine-readable features.
+                    </p>
+
+                </div>
+
+
+                <!-- Step 2 -->
+
+                <div class="step">
+
+                    <div class="step-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Classify
+                    </h3>
+
+                    <p>
+                        A trained machine-learning model analyzes
+                        patterns within the text.
+                    </p>
+
+                </div>
+
+
+                <!-- Step 3 -->
+
+                <div class="step">
+
+                    <div class="step-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Explain
+                    </h3>
+
+                    <p>
+                        The system highlights textual indicators
+                        associated with the prediction.
+                    </p>
+
+                </div>
+
+
+                <!-- Step 4 -->
+
+                <div class="step">
+
+                    <div class="step-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Inform
+                    </h3>
+
+                    <p>
+                        Users receive an assessment while retaining
+                        responsibility for final verification.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-brand">
+            TRUTHLENS AI
+        </div>
+
+        <p>
+            Explainable AI for responsible news analysis.
+        </p>
+
+        <span>
+            HACKATHON PROTOTYPE · 2026
+        </span>
+
+    </footer>
+
+
+
+    <!-- Our JavaScript file -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+```
