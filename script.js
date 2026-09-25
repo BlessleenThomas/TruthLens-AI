@@ -1,4 +1,4 @@
-```javascript
+
 /* =========================================================
    TRUTHLENS AI
    Frontend Controller
@@ -1111,4 +1111,3 @@ document.addEventListener(
 
     }
 );
-```
